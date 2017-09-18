@@ -1,0 +1,5 @@
+---
+
+- hosts: labo_hosts
+  remote_user: machine_user
+  password: machine_pass

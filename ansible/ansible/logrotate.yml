@@ -1,0 +1,10 @@
+---
+
+- name: logrotate_test
+  hosts: labo_hosts
+  sudo: yes
+  vars_files:
+  - group_vars/labo_hosts
+
+  roles: 
+  - logrotate
