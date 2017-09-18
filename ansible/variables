@@ -1,0 +1,6 @@
+---
+
+- hosts: labo_hosts
+  vars:
+      remote_user: debian
+      remote_password: nimda

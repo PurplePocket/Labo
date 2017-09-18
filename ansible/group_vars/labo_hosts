@@ -1,0 +1,4 @@
+remote_user: debian
+ansible_ssh_pass: nimda
+sudo_user: debian
+ansible_sudo_pass: nimda

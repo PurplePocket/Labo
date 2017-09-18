@@ -1,0 +1,21 @@
+---
+   - name: ping host
+     ping:
+
+   - name: Install logrotate
+     apt: pkg=logrotate state=installed update_cache=false
+     notify:
+      - Start logrotate
+
+   - name: Copy template
+     template: src=files/logrotate.config dest=/etc/logrotate.d
+     notify: 
+      - Restart logrotate
+
+   - name: Install apache
+     apt: pkg=apache2 state=installed update_cache=false
+
+   - name: Copy ansible.html
+     template: src=files/ansible.html dest=/var/www/html/
+     notify:
+      - Restart apache
